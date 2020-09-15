@@ -1,15 +1,15 @@
-from flask import Flask, render_template
+from flask import Flask, jsonify, render_template
 
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/', methods=['GET'])
 def index():
     return render_template('index.html')
     
-@app.route('/super_secret_password/tas_only/do_not_enter/password', methods=['GET'])
+@app.route('/', methods=['POST'])
 def super_secret_password():
-    return 'super_secret_password'
+    return jsonify({'super_secret_password': 'jacked cable'})
     
 if __name__ == '__main__':
     app.debug=True

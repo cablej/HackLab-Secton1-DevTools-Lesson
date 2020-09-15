@@ -4,11 +4,60 @@
   <meta charset="utf-8" />
   <title>Hello world!</title>
   <script src="{{url_for('static', filename='main.js')}}" charset="utf-8"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
   <link type="text/css" rel="stylesheet" href="{{url_for('static', filename='main.css')}}" />
 </head>
 <body>
   
-<p>It works!</p>
+<div class="container" style="width: 100%">
+  <div class="col-lg-12 col-centered text-center" style="font-size: 60px; font-weight: bold;">
+    Welcome to Hack Lab!
+  </div>
+  <p class="cenb"></p>
+  <div class="row col-centered text-center" style="margin: 50px;">
+    <div class="col-lg-2">
+      
+    </div>
+    <div class="col-lg-4">
+      <img class="prof" src="{{url_for('static', filename='alex.jpg')}}" alt="picture of alex stamos" style="">
+      <br>  Alex Stamos
+    </div>
+    <div class="col-lg-4">
+      <img class="prof" src="{{url_for('static', filename='riana.jpeg')}}" alt="Photo of Riana on a panel">
+      <br>Riana Pfefferkorn
+    </div>
+    <div class="col-lg-2">
+      
+    </div>
+  </div>
+  <div class="row col-centered text-center">
+    <div class="col-md">
+      <img class="ta" src="{{url_for('static', filename='jack.png')}}" alt="Photo of jack with white background"><br>
+      Jack Cable
+    </div>
+    <div class="col-md">
+      <img class="ta" src="{{url_for('static', filename='alexz.jpg')}}" alt=""><br>
+      Alex Zaheer
+      <!-- The secret word is "Heinlein" --> 
+    </div>
+    <div class="col-md">
+      <img class="ta" src="{{url_for('static', filename='pierce.jpeg')}}" alt=""><br>
+      Pierce Lowary
+    </div>
+    <div class="col-md">
+      <img class="ta" src="{{url_for('static', filename='maya.jpg')}}" alt=""><br>
+      Maya Ziv
+    </div>
+    <div style="display: none;" class="col-md">
+      <img class="ta" src="{{url_for('static', filename='cooper.jpg')}}" alt=""><br>
+      Cooper de Nicola
+    </div>
+  </div>
+  <div style="display: none;" class="col-sm-12 col-centered text-center" style="font-weight: bold;">
+    <button type="button" name="button" onclick="getSecretPassword('{{ url_for('super_secret_password') }}')"> Get Super Secret Password >> </button>
+  </div>
+</div>
+
 
 </body>
 </html>
