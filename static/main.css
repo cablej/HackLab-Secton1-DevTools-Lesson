@@ -2,6 +2,10 @@
     display: inline-block;
 }
 
+.row.col-centered {
+    margin: 50px;
+}
+
 img.prof {
   border: 1px solid #ddd;
   border-radius: 6px;
